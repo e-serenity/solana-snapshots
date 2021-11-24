@@ -47,10 +47,10 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build the Docker image.
-        run: docker build -t kyve/solana-snapshots:${GITHUB_REF#refs/tags/} -t kyve/solana-snapshots:latest .
+        run: docker build -t kyve/solana\-snapshots:${GITHUB_REF#refs/tags/} -t kyve/solana\-snapshots:latest .
 
       - name: Push to Docker hub.
-        run: docker push -a kyve/solana-snapshots
+        run: docker push -a kyve/solana\-snapshots
 
   webhook:
     name: Post a message to Discord.
