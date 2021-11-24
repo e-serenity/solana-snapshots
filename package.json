@@ -1,0 +1,28 @@
+{
+  "name": "@kyve/solana-snapshots",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "build:binaries": "yarn build && pkg ./dist/src/index.js --targets latest-linux-x64,latest-macos-x64,latest-win-x64 --out-path out",
+    "start": "node ./dist/src/index.js",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@kyve/core": "^0.1.0",
+    "@solana/web3.js": "^1.30.2",
+    "arweave": "^1.10.18",
+    "graphql": "^16.0.1",
+    "graphql-request": "^3.6.1",
+    "object-hash": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.10",
+    "@types/object-hash": "^2.2.1",
+    "pkg": "^5.4.1",
+    "prettier": "^2.4.1",
+    "tslog": "^3.2.2",
+    "typescript": "^4.5.2",
+    "webhook-discord": "^3.7.8"
+  }
+}
